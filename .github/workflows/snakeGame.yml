@@ -1,4 +1,4 @@
-name: Generate Pacman Contribution Graph
+name: Generate Snake
 
 on:
   schedule:
@@ -14,14 +14,16 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Generate Pac-Man Contribution Graph
-        uses: abozanona/pacman-contribution-graph@main
+      - name: Generate github-snake.svg
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/pacman-contribution-graph.svg?canvas_bg_color=%23000000&wall_color=%2300FFFF&dots_colors=%23FF00FF,%23FFFF00,%2300FF00,%23FFFFFF&pacman_color=%23FFFF00
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
-      - name: Push Pacman Graph to output branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
