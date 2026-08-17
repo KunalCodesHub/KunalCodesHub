@@ -48,9 +48,11 @@
 
 ---
 
-## 🎮 Pac-Man Eating My Contributions!
+## 🐍 Watch the Snake Eat My Contributions!
 
-![Pacman animation](https://raw.githubusercontent.com/KunalCodesHub/KunalCodesHub/output/pacman-contribution-graph.svg)
+<p align="center">
+  <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/KunalCodesHub/KunalCodesHub/output/github-snake-dark.svg" />
+</p>
 
 ---
 
